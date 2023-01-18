@@ -9,6 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 
 
+//Endpoint handleing
 app.get("/url", (req, res) => {
     res.json(["Tony", "Lisa", "Michael", "Ginger", "Food"]);
 });
@@ -18,6 +19,11 @@ app.post('/url', function (req, res) {
     //res = body;
     const somee = {msg:'success', status:'okay'}
     res.send(somee);
+  });
+
+  app.post('/bounce', (req, res) => {
+    const b0dy = req.body;
+    res.send(b0dy);
   });
 
 app.listen(PORT, () => {
