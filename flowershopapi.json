@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "http://api.example.com/v1"
+      "url": "https://application-01.xy3smyva01y.us-east.codeengine.appdomain.cloud"
     }
   ],
   "paths": {

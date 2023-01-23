@@ -27,19 +27,19 @@ app.post('/flowerstock', function (req, res) {//check the flowers we have in sto
 
     //if loops
     if (color == "blue" && type == "rose") {
-        resp['body'] = bluerose;
+        resp = bluerose;
     }
     if (color == "blue" && type == "daisy") {
-        resp['body'] = bluedaisy;
+        resp = bluedaisy;
     }
     if (color == "red" && type == "rose") {
-        resp['body'] = redrose;
+        resp = redrose;
     }
     if (color == "red" && type == "daisy") {
-        resp['body'] = reddaisy;
+        resp = reddaisy;
     }
     if (color == "white" && type == "tulip") {
-        resp['body'] = whitetulip;
+        resp = whitetulip;
     }
 
     //send the response back
@@ -48,7 +48,7 @@ app.post('/flowerstock', function (req, res) {//check the flowers we have in sto
 
 //post endpoint for odering
 app.post('/order', (req, res) => {
-    var resp = { "body": "No_match" };//If there's no matching if statement, default to body: no_match
+    var resp = { "key": "No_match" };//If there's no matching if statement, default to body: no_match
     var b0dy = req["body"];
     var color = b0dy["color"];
     var type = b0dy["flowertype"];
@@ -58,23 +58,23 @@ app.post('/order', (req, res) => {
     //if loops
     if (color == "blue" && type == "rose") {
         var totals = (parseFloat(bluerose['cost']) * number);
-        resp['body'] = { 'total': totals, 'message': 'Thankyou for your order' };
+        resp = { 'total': totals, 'message': 'Thankyou for your order' };
     }
     if (color == "blue" && type == "daisy") {
         var totals = (parseFloat(bluedaisy['cost']) * number);
-        resp['body'] = { 'total': totals, 'message': 'Thankyou for your order' };
+        resp = { 'total': totals, 'message': 'Thankyou for your order' };
     }
     if (color == "red" && type == "rose") {
         var totals = (parseFloat(redrose['cost']) * number);
-        resp['body'] = { 'total': totals, 'message': 'Thankyou for your order' };
+        resp = { 'total': totals, 'message': 'Thankyou for your order' };
     }
     if (color == "red" && type == "daisy") {
         var totals = (parseFloat(reddaisy['cost']) * number);
-        resp['body'] = { 'total': totals, 'message': 'Thankyou for your order' };
+        resp = { 'total': totals, 'message': 'Thankyou for your order' };
     }
     if (color == "white" && type == "tulip") {
         var totals = (parseFloat(whitetulip['cost']) * number);
-        resp['body'] = { 'total': totals, 'message': 'Thankyou for your order' };
+        resp = { 'total': totals, 'message': 'Thankyou for your order' };
     }
 
     //send the resoonse back 
