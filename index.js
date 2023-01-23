@@ -1,5 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+
+//JSON blocks to be returned
 var bluerose = { 'indentifiers': { 'color': 'blue', 'flowertype': 'rose' }, 'instock': 'true', 'number': '22', 'cost': '10.32', 'hours': '3' };
 var bluedaisy = { 'indentifiers': { 'color': 'blue', 'flowertype': 'daisy' }, 'instock': 'true', 'number': '43', 'cost': '7.22', 'hours': '0.5' };
 var redrose = { 'indentifiers': { 'color': 'red', 'flowertype': 'rose' }, 'instock': 'true', 'number': '32', 'cost': '11.57', 'hours': '1.5' };
@@ -84,6 +86,10 @@ app.get('/status', (req, res) => {
     const somee = { msg: 'success', status: 'okay' }
     res.send(somee);
 })
+
+app.get('', (req, res) => {
+    res.send("Fast Flowers API! - Your source for the most convienient flowers");
+});
 
 app.listen(PORT, () => {
     console.log("Server running on port 8080");
