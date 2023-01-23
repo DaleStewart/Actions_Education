@@ -53,7 +53,7 @@
         },
         "responses": {
           "200": {
-            "description": "A user object.",
+            "description": "A flower inventory object.",
             "content": {
               "application/json": {
                 "schema": {
@@ -98,7 +98,7 @@
     },
     "/order": {
       "post": {
-        "description": "Returns a Flower object detailing inventory",
+        "description": "post /order Returns a confirmation and order price",
         "requestBody": {
           "required": true,
           "content": {
