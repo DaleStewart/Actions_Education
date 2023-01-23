@@ -15,17 +15,13 @@ app.use(bodyParser.json());
 
 
 //Endpoint handleing
-app.get("/url", (req, res) => {
-    res.json(["Tony", "Lisa", "Michael", "Ginger", "Food"]);
-});
-
-app.post('/flowerstock', function (req, res) {
+app.post('/flowerstock', function (req, res) {//check the flowers we have in stock
     console.log("Flowerstock hit");
     var resp = { "body": "No_match" };//If there's no matching if statement, default to body: no_match
     //console.log(req);
     var b0ddy = req["body"]
     var color = b0ddy["color"];
-    var type = b0ddy["type"];
+    var type = b0ddy["flowertype"];
 
     //if loops
     if (color == "blue" && type == "rose") {
@@ -53,7 +49,7 @@ app.post('/order', (req, res) => {
     var resp = { "body": "No_match" };//If there's no matching if statement, default to body: no_match
     var b0dy = req["body"];
     var color = b0dy["color"];
-    var type = b0dy["type"];
+    var type = b0dy["flowertype"];
     var number = parseFloat(b0dy['number']); //how many flowers were ordered
     console.log(number);
 
