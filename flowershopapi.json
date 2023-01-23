@@ -1,0 +1,147 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Swagger Petstore - OpenAPI 3.0",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://api.example.com/v1"
+    }
+  ],
+  "paths": {
+    "/status": {
+      "get": {
+        "summary": "Returns a status of the API to confirm it is running",
+        "responses": {
+          "200": {
+            "description": "A JSON object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/flowerstock": {
+      "post": {
+        "description": "Returns a Flower object detailing inventory",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "flowertype": {
+                    "type": "string"
+                  },
+                  "color": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "A user object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "identifiers": {
+                      "type": "object",
+                      "properties": {
+                        "color": {
+                          "type": "string",
+                          "example": "red"
+                        },
+                        "flowertype": {
+                          "type": "string",
+                          "example": "rose"
+                        }
+                      }
+                    },
+                    "instock": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "number": {
+                      "type": "integer",
+                      "example": 94
+                    },
+                    "cost": {
+                      "type": "number",
+                      "example": 10.32
+                    },
+                    "hours": {
+                      "type": "number",
+                      "example": 3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/order": {
+      "post": {
+        "description": "Returns a Flower object detailing inventory",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "flowertype": {
+                    "type": "string"
+                  },
+                  "color": {
+                    "type": "string"
+                  },
+                  "number": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Order Confirmation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "total": {
+                      "type": "number"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Thankyou for your order"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
