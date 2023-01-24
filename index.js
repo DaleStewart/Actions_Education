@@ -11,7 +11,7 @@ var whitetulip = { 'indentifiers': { 'color': 'white', 'flowertype': 'tulip' }, 
 //port setup
 const PORT = 8080;
 
-//app setup
+//App setup
 const app = express();
 app.use(bodyParser.json());
 

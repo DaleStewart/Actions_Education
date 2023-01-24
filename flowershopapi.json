@@ -133,7 +133,7 @@
                     },
                     "message": {
                       "type": "string",
-                      "example": "Thankyou for your order"
+                      "example": "Thankyou for your order!"
                     }
                   }
                 }
