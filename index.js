@@ -18,27 +18,27 @@ app.use(bodyParser.json());
 
 //Endpoint handleing
 app.post('/flowerstock', function (req, res) {//check the flowers we have in stock
-    console.log("Flowerstock hit");
+    //console.log("Flowerstock hit"); //debug
     var resp = { "key": "No_match" };//If there's no matching if statement, default to body: no_match
-    //console.log(req);
+    //console.log(req); //debug
     var b0ddy = req["body"]
     var color = b0ddy["color"];
     var type = b0ddy["flowertype"];
 
     //if loops
-    if (color == "blue" && type == "rose") {
+    if (color.toLowerCase() == "blue" && type.toLowerCase() == "rose") {
         resp = bluerose;
     }
-    if (color == "blue" && type == "daisy") {
+    if (color.toLowerCase() == "blue" && type.toLowerCase() == "daisy") {
         resp = bluedaisy;
     }
-    if (color == "red" && type == "rose") {
+    if (color.toLowerCase() == "red" && type.toLowerCase() == "rose") {
         resp = redrose;
     }
-    if (color == "red" && type == "daisy") {
+    if (color.toLowerCase() == "red" && type.toLowerCase() == "daisy") {
         resp = reddaisy;
     }
-    if (color == "white" && type == "tulip") {
+    if (color.toLowerCase() == "white" && type.toLowerCase() == "tulip") {
         resp = whitetulip;
     }
 
@@ -56,23 +56,23 @@ app.post('/order', (req, res) => {
     console.log(number);
 
     //if loops
-    if (color == "blue" && type == "rose") {
+    if (color.toLowerCase() == "blue" && type.toLowerCase() == "rose") {
         var totals = (parseFloat(bluerose['cost']) * number);
         resp = { 'total': totals, 'message': 'Thankyou for your order', 'key': 'match' };
     }
-    if (color == "blue" && type == "daisy") {
+    if (color.toLowerCase() == "blue" && type.toLowerCase() == "daisy") {
         var totals = (parseFloat(bluedaisy['cost']) * number);
         resp = { 'total': totals, 'message': 'Thankyou for your order', 'key': 'match' };
     }
-    if (color == "red" && type == "rose") {
+    if (color.toLowerCase() == "red" && type.toLowerCase() == "rose") {
         var totals = (parseFloat(redrose['cost']) * number);
         resp = { 'total': totals, 'message': 'Thankyou for your order', 'key': 'match' };
     }
-    if (color == "red" && type == "daisy") {
+    if (color.toLowerCase() == "red" && type.toLowerCase() == "daisy") {
         var totals = (parseFloat(reddaisy['cost']) * number);
         resp = { 'total': totals, 'message': 'Thankyou for your order', 'key': 'match' };
     }
-    if (color == "white" && type == "tulip") {
+    if (color.toLowerCase() == "white" && type.toLowerCase() == "tulip") {
         var totals = (parseFloat(whitetulip['cost']) * number);
         resp = { 'total': totals, 'message': 'Thankyou for your order', 'key': 'match' };
     }
