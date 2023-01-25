@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "https://application-2a.y3t4gz5c69z.us-east.codeengine.appdomain.cloud"
+      "url": "https://application-1a.y3t4gz5c69z.us-east.codeengine.appdomain.cloud"
     }
   ],
   "paths": {

@@ -2,11 +2,11 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 //JSON blocks to be returned
-var bluerose = { 'indentifiers': { 'color': 'blue', 'flowertype': 'rose' }, 'instock': 'true', 'number': '22', 'cost': '10.32', 'hours': '3', 'key': 'match' };
-var bluedaisy = { 'indentifiers': { 'color': 'blue', 'flowertype': 'daisy' }, 'instock': 'true', 'number': '43', 'cost': '7.22', 'hours': '0.5', 'key': 'match' };
-var redrose = { 'indentifiers': { 'color': 'red', 'flowertype': 'rose' }, 'instock': 'true', 'number': '32', 'cost': '11.57', 'hours': '1.5', 'key': 'match' };
-var reddaisy = { 'indentifiers': { 'color': 'red', 'flowertype': 'daisy' }, 'instock': 'true', 'number': '12', 'cost': '5.49', 'hours': '2', 'key': 'match' };
-var whitetulip = { 'indentifiers': { 'color': 'white', 'flowertype': 'tulip' }, 'instock': 'true', 'number': '34', 'cost': '2.40', 'hours': '1', 'key': 'match' };
+var bluerose = { 'identifiers': { 'color': 'blue', 'flowertype': 'rose' }, 'instock': 'true', 'number': '22', 'cost': '10.32', 'hours': '3', 'key': 'match' };
+var bluedaisy = { 'identifiers': { 'color': 'blue', 'flowertype': 'daisy' }, 'instock': 'true', 'number': '43', 'cost': '7.22', 'hours': '0.5', 'key': 'match' };
+var redrose = { 'identifiers': { 'color': 'red', 'flowertype': 'rose' }, 'instock': 'true', 'number': '32', 'cost': '11.57', 'hours': '1.5', 'key': 'match' };
+var reddaisy = { 'identifiers': { 'color': 'red', 'flowertype': 'daisy' }, 'instock': 'true', 'number': '12', 'cost': '5.49', 'hours': '2', 'key': 'match' };
+var whitetulip = { 'identifiers': { 'color': 'white', 'flowertype': 'tulip' }, 'instock': 'true', 'number': '34', 'cost': '2.40', 'hours': '1', 'key': 'match' };
 
 //port setup
 const PORT = 8080;
