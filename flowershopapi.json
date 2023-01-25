@@ -6,13 +6,13 @@
   },
   "servers": [
     {
-      "url": "https://application-1a.y3t4gz5c69z.us-east.codeengine.appdomain.cloud"
+      "url": "https://application-2a.y3t4gz5c69z.us-east.codeengine.appdomain.cloud"
     }
   ],
   "paths": {
     "/status": {
       "get": {
-        "summary": "Returns a status of the API to confirm it is running",
+        "operationId": "getStatus",
         "responses": {
           "200": {
             "description": "A JSON object",
@@ -32,7 +32,7 @@
     },
     "/flowerstock": {
       "post": {
-        "description": "Returns a Flower object detailing inventory",
+        "operationId": "postFlowerstock",
         "requestBody": {
           "required": true,
           "content": {
@@ -87,6 +87,10 @@
                     "hours": {
                       "type": "number",
                       "example": 3
+                    },
+                    "key": {
+                      "type": "string",
+                      "example": "no_match"
                     }
                   }
                 }
@@ -98,7 +102,7 @@
     },
     "/order": {
       "post": {
-        "description": "post /order Returns a confirmation and order price",
+        "operationId": "postOrder",
         "requestBody": {
           "required": true,
           "content": {
@@ -134,6 +138,10 @@
                     "message": {
                       "type": "string",
                       "example": "Thankyou for your order!"
+                    },
+                    "key": {
+                      "type": "string",
+                      "example": "no_match"
                     }
                   }
                 }

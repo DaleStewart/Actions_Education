@@ -26,19 +26,21 @@ app.post('/flowerstock', function (req, res) {//check the flowers we have in sto
     var type = b0ddy["flowertype"];
 
     //if loops
-    if (color.toLowerCase() == "blue" && type.toLowerCase() == "rose") {
+    if (color.toLowerCase() == "blue" && (type.toLowerCase() == "rose" || type.toLowerCase() == 'roses')) {
         resp = bluerose;
     }
-    if (color.toLowerCase() == "blue" && type.toLowerCase() == "daisy") {
+    if (color.toLowerCase() == "blue" && (type.toLowerCase() == "daisy" ||
+        type.toLowerCase() == 'daisies' || type.toLowerCase() == 'daisys')) {
         resp = bluedaisy;
     }
-    if (color.toLowerCase() == "red" && type.toLowerCase() == "rose") {
+    if (color.toLowerCase() == "red" && (type.toLowerCase() == "rose" || type.toLowerCase() == 'roses')) {
         resp = redrose;
     }
-    if (color.toLowerCase() == "red" && type.toLowerCase() == "daisy") {
+    if (color.toLowerCase() == "red" && (type.toLowerCase() == "daisy" ||
+        type.toLowerCase() == 'daisies' || type.toLowerCase() == 'daisys')) {
         resp = reddaisy;
     }
-    if (color.toLowerCase() == "white" && type.toLowerCase() == "tulip") {
+    if (color.toLowerCase() == "white" && (type.toLowerCase() == "tulip" || type.toLowerCase() == 'tulips')) {
         resp = whitetulip;
     }
 
@@ -56,23 +58,25 @@ app.post('/order', (req, res) => {
     console.log(number);
 
     //if loops
-    if (color.toLowerCase() == "blue" && type.toLowerCase() == "rose") {
+    if (color.toLowerCase() == "blue" && (type.toLowerCase() == "rose" || type.toLowerCase() == 'roses')) {
         var totals = (parseFloat(bluerose['cost']) * number);
         resp = { 'total': totals, 'message': 'Thankyou for your order', 'key': 'match' };
     }
-    if (color.toLowerCase() == "blue" && type.toLowerCase() == "daisy") {
+    if (color.toLowerCase() == "blue" && (type.toLowerCase() == "daisy" ||
+        type.toLowerCase() == 'daisies' || type.toLowerCase() == 'daisys')) {
         var totals = (parseFloat(bluedaisy['cost']) * number);
         resp = { 'total': totals, 'message': 'Thankyou for your order', 'key': 'match' };
     }
-    if (color.toLowerCase() == "red" && type.toLowerCase() == "rose") {
+    if (color.toLowerCase() == "red" && (type.toLowerCase() == "rose" || type.toLowerCase() == 'roses')) {
         var totals = (parseFloat(redrose['cost']) * number);
         resp = { 'total': totals, 'message': 'Thankyou for your order', 'key': 'match' };
     }
-    if (color.toLowerCase() == "red" && type.toLowerCase() == "daisy") {
+    if (color.toLowerCase() == "red" && (type.toLowerCase() == "daisy" ||
+        type.toLowerCase() == 'daisies' || type.toLowerCase() == 'daisys')) {
         var totals = (parseFloat(reddaisy['cost']) * number);
         resp = { 'total': totals, 'message': 'Thankyou for your order', 'key': 'match' };
     }
-    if (color.toLowerCase() == "white" && type.toLowerCase() == "tulip") {
+    if (color.toLowerCase() == "white" && (type.toLowerCase() == "tulip" || type.toLowerCase() == 'tulips')) {
         var totals = (parseFloat(whitetulip['cost']) * number);
         resp = { 'total': totals, 'message': 'Thankyou for your order', 'key': 'match' };
     }
