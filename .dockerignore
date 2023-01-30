@@ -3,3 +3,4 @@ npm-debug.log
 flowershopapi.json
 .gitignore
 /node_modules
+node_modules/
