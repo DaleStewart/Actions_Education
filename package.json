@@ -1,7 +1,7 @@
 {
   "name": "reservations",
   "version": "1.0.0",
-  "description": "Api For checking your reservation with a resturant",
+  "description": "Api For checking your flowers",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "expressjs/express"
   }
 }
