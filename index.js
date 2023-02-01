@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const path = require('path');
 
 //JSON blocks to be returned
 var bluerose = { 'identifiers': { 'color': 'blue', 'flowertype': 'rose' }, 'instock': 'true', 'number': '22', 'cost': '10.32', 'hours': '3', 'key': 'match' };
@@ -92,7 +93,7 @@ app.get('/status', (req, res) => {
 })
 
 app.get('', (req, res) => {
-    res.send("Fast Flowers API! - Your source for the most convienient flowers");
+    res.sendFile(path.join(__dirname, '/index.html'));
 });
 
 app.listen(PORT, () => {
