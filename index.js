@@ -12,7 +12,7 @@ var whitetulip = { 'identifiers': { 'color': 'white', 'flowertype': 'tulip' }, '
 //port setup
 const PORT = 8080;
 
-//App setup
+//app setup
 const app = express();
 app.use(bodyParser.json());
 
@@ -93,6 +93,7 @@ app.get('/status', (req, res) => {
 })
 
 app.get('', (req, res) => {
+    //return the html file to be rendered
     res.sendFile(path.join(__dirname, '/index.html'));
 });
 
