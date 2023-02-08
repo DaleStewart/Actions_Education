@@ -1,1 +1,6 @@
-This is intended for use with the Your learning course found at: [URL Here]
+This is intended for use with the Your learning course found at: https://yourlearning.ibm.com/activity/PLAN-B1F1F4BD5610
+To deploy on Code engine an IBM cloud pay as you go plan is required. It is stated, correctly, that everything in this series is available in the free tier,
+however it still requires account upgrade. No cost will be incured, however the situation is confusing.
+I apologize for not being more clear.
+See the document below for more details.
+https://www.ibm.com/cloud/code-engine/pricing
