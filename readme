@@ -1,6 +1,10 @@
 This is intended for use with the Your learning course found at: https://yourlearning.ibm.com/activity/PLAN-B1F1F4BD5610
-To deploy on Code engine an IBM cloud pay as you go plan is required. It is stated, correctly, that everything in this series is available in the free tier,
-however it still requires account upgrade. No cost will be incured, however the situation is confusing.
-I apologize for not being more clear.
-See the document below for more details.
-https://www.ibm.com/cloud/code-engine/pricing
+It is stated, correctly, that everything in this series is available in the free tier,
+however code engine has restrictions in particular that need to be worked around if you have an IBM Cloud Lite Plan. 
+
+To Deploy to code engine when you have an IBM cloud Lite account go to this link
+and provision an instance of Code Engine on Techzone: https://techzone.ibm.com/my/reservations/create/622727c90ee6a20018ab51e8
+
+It might also be helpful to have a Quay.io or Dockerhub account & namespace ready. https://quay.io/ or https://hub.docker.com/
+
+I apologize for not being more clear at first.
